@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: empty-pods-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: empty-pods
+  template:
+    metadata:
+      labels:
+        app: empty-pods
+    spec:
+      containers:
+      - name: empty-pod-container
+        image: alpine:latest
+        command: ["sleep", "infinity"]
