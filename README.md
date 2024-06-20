@@ -7,7 +7,6 @@ We can run this program locally
 
 In <i>main.go</i> find the where its locating your kubeconfig file and change the path.
 
-Make sure the compile the binary for Linux since thats the OS our container runs.
 
 `go build`
 
@@ -19,7 +18,7 @@ It should list the pods and deployments running in the cluster.
 To run this app as a deployment in our cluster:
 Because kubernetes is container orchestrator, we have to containerize our app
 
-Make sure to compile the binary to run on Linux OS since thats what our container runs on.
+Make sure to compile the binary to run on Linux since thats what our container runs on.
 
 `GOOS=linux go build -o listerLinux`
 
